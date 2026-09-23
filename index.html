@@ -11,6 +11,20 @@
   <title>She Blossoms Conference 2026 — Evolve</title>
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/css/form.css">
+  <script src="/js/form.js" defer></script>
+
+   <!-- Script for emailjs -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init({
+            publicKey: "pI-CC10ALlJHd8_Kg",
+        });
+        })();
+    </script>
   <style>
     @media (min-width:992px) {
       html.w-mod-js:not(.w-mod-ix) [data-w-id="00c09502-60b3-3402-6388-59a90e745620"] {
@@ -495,17 +509,19 @@
               </div>
             </div>
             <nav role="navigation" class="nav-menu w-nav-menu">
-              <div class="nav-header"><a href="#" class="w-inline-block"><img
-                    src="images/she-blossom-logo.png" class="logo" /></a>
+              <div class="nav-header">
+                <a href="#" class="w-inline-block">
+                  <img src="images/she-blossom-logo.png" style="background: linear-gradient(130deg, blue, pink);" class="logo" />
+                </a>
                 <div class="close-icon-wrapper w-nav-button"><img
                     src="https://cdn.prod.website-files.com/5db723eefbe1d737beb3a228/5db723eefbe1d7be23b3a264_icon-close.svg"
                     width="22" height="24" alt="" class="close-icon" /></div>
               </div>
-              <div class="nav-links-wrapper"><a href="#register" class="nav-link w-nav-link">Register</a><a
-                  href="#speakers" class="nav-link w-nav-link">Speakers</a><a href="#learning"
-                  class="nav-link w-nav-link">Learning Communities</a><a href="#about"
-                  class="nav-link w-nav-link">About</a><a href="#volunteer" class="nav-link w-nav-link">Volunteer</a><a
-                  href="#volunteer" class="nav-link w-nav-link">Travel</a></div>
+              <div class="nav-links-wrapper">
+                <a href="#register" class="nav-link w-nav-link">Register</a>
+                <a href="#learning" class="nav-link w-nav-link">How to Blossom</a>
+                <a href="#about" class="nav-link w-nav-link">About</a>
+                <a href="#volunteer" class="nav-link w-nav-link">Volunteer</a>
               <div class="nav-menu-texture"></div>
             </nav>
           </div>
@@ -541,27 +557,9 @@
       <div class="theme-content">
         <div data-w-id="e953738a-1d5a-f4c1-dc50-9951ff06529a" class="container max-width-806">
           <div class="overline-lg">2026 Theme: Evolve</div>
-          <h2>
-            You were never meant to stay the same. After walking into the OVERFLOW, God does not expect you to stop there. Every season with God asks you to become more than you were yesterday. It’s time to EVOLVE.
-          </h2><a
-            href="#" class="play-button-wrapper w-inline-block w-lightbox"><img
-              src="https://cdn.prod.website-files.com/5db723eefbe1d737beb3a228/5db723eefbe1d7f31fb3a26a_play-button.svg"
-              width="100" height="100" alt="Play Button" />
-            <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://youtu.be/VAF1RoB9PJA?autoplay=1",
-      "originalUrl": "https://youtu.be/VAF1RoB9PJA?autoplay=1",
-      "width": 940,
-      "height": 528,
-      "thumbnailUrl": "https://i.ytimg.com/vi/VAF1RoB9PJA/hqdefault.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FVAF1RoB9PJA%3Ffeature%3Doembed%26autoplay%3D1&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVAF1RoB9PJA&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FVAF1RoB9PJA%2Fhqdefault.jpg&args=autoplay%3D1&key=96f1f04c5f4143bcb0f2e68c87d65feb&autoplay=1&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
-          </a>
+          <h2 class="max-width-806-h2">
+            You were never meant to stay the same. After walking into the <span style="color: pink; font-style: italic;">OVERFLOW</span>, God does not expect you to stop there. Every season with God asks you to become more than you were yesterday. It's time to <span style="color: pink; font-style: italic;">EVOLVE.</span>
+          </h2>
         </div>
         <div class="svg__theme-bottom-curves"></div>
       </div>
@@ -594,7 +592,7 @@
   <!-- HERO 2 -->
   <section id="about" class="section">
     <div class="container max-width-1000 mb-100">
-      <h2 itemprop="description" class="h2-small h2-gradient">
+      <h2 itemprop="description" class="h2-small">
         Every woman carries a seed of purpose. The She Blossoms Conference is two days of watering it: in the Word, in fellowship, and in faith, until what God planted in you begins to flourish.
       </h2>
     </div>
@@ -873,6 +871,51 @@
     </div>
   </section>
 
+  <!-- FORM -->
+
+   <secction id="contact" class="contact section">
+        <h3>Get In Touch</h3>
+        
+        <div class="contact-us">
+            <form>
+                <div class="name">                
+                    <div class="name">
+                        <p>Name</p>
+                        <input id="name" type="text" placeholder="Enter your name">
+                    </div>
+                </div>
+
+                <div class="email">
+                    <p>Email</p>
+                    <input id="email" type="email" placeholder="ObiMusaAde@gmail.com">
+                </div>
+
+                <div class="phone">
+                    <p>Phone Number</p>
+                    <input id="phone-number" type="text" placeholder="08142345678">
+                </div>
+
+                <div class="message">
+                    <textarea id="textarea" placeholder="Write your message" rows="5"></textarea>
+                </div>
+
+                <button class="contact-btn" type="submit" onclick="sendMail()">Send Message</button>
+            </form>
+
+            <div class="contact-details">
+                <h5>Contact us on</h5>
+                <p>
+                    For any inquiries or general 
+                    information, please reach out to us via:
+                </p>
+
+                <p>Email: sheblossoms.wgn@gmail.com</p>
+                <p>Phone: +234656545454</p>
+                <p>Address: WordFeast Auditorium Plot 411/413, Alexander David's Event Place, Zik-Avenue, Awka</p>
+            </div>
+        </div>
+    </secction>
+
   <!-- BECOME A VOLUNTEER -->
   <section id="volunteer" class="section overflow-hidden">
     <div class="circle-img-container">
@@ -907,7 +950,7 @@
             class="footer-link">Volunteer</a><a href="#travel" class="footer-link">Shop</a>
           <div class="mt-mb-40">
             <div>Questions?</div>
-            <p class="p2">Email <a href="mailto:info@oceanprograms.com" class="p2-link">sheblossoms.wgn@gmail.com</a> </p>
+            <p class="p2">Email: <a href="mailto:info@oceanprograms.com" class="p2-link">sheblossoms.wgn@gmail.com</a> </p>
           </div><a href="#top" data-w-id="3365ef11-d455-5464-df20-c06acfbbb86a" class="back-to-top w-inline-block"><img
               src="https://cdn.prod.website-files.com/5db723eefbe1d737beb3a228/5db723eefbe1d7a7e8b3a284_icon-arrow-top.svg"
               width="32" height="32" alt="arrow" data-w-id="189fbe33-2743-dff4-4ccf-82b6c9fe1757" />
@@ -920,11 +963,6 @@
             <h3 class="mb-30"></h3>
             <a href="#register" class="button w-button">Register</a>
           </div>
-          <!-- <div data-w-id="9d051de1-6da4-c9d7-1076-0c702c6faed6" style="opacity:0" class="register-child ml-50">
-            <h3 class="h3-speaker">Student Admission</h3>
-            <h3 class="mb-30">$49</h3>
-            <a href="#register" class="button landscape-hide w-button">Register</a>
-          </div> -->
         </div>
       </div>
     </div>

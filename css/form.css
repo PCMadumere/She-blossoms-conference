@@ -1,0 +1,90 @@
+.contact{ 
+    padding: 100px 20px;
+}
+
+.contact.section{
+    margin: 5rem auto;
+}
+
+.contact h3{
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-us{
+    max-width: 70rem;
+    background: linear-gradient(#53174ee5, #142650e5), url(/images/bg-texture-red.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    color: #fff;
+    padding: 2rem;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+}
+
+form{
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.email{
+    margin: 15px 0;
+}
+
+.message{
+    margin: 15px 0;
+}
+
+::placeholder{
+    padding: 5px;
+    font-size: 12px;
+}
+
+.contact input,
+.contact textarea{
+    padding: 10px;
+    font-size: 16px;
+    background: transparent;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: white;
+}
+
+.contact-btn{
+    padding: 12px;
+    font-size: 18px;
+    background: pink;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 2px #c27707;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover{
+    color: #0f172a;
+}
+
+.contact-details{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.contact-details p{
+    margin-top: 15px;
+    color: #fff;
+}
+
+.contact-details h5{
+    font-size: 1.5rem;
+}
