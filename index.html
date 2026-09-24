@@ -872,35 +872,36 @@
   </section>
 
   <!-- FORM -->
-
    <secction id="contact" class="contact section">
         <h3>Get In Touch</h3>
         
         <div class="contact-us">
-            <form>
-                <div class="name">                
-                    <div class="name">
-                        <p>Name</p>
-                        <input id="name" type="text" placeholder="Enter your name">
-                    </div>
-                </div>
+            <form id="contact-form" onsubmit="sendMail(event)">
+    <div class="name">                
+        <div class="name">
+            <p>Name</p>
+            <input id="name" type="text" placeholder="Enter your name" required>
+        </div>
+    </div>
 
-                <div class="email">
-                    <p>Email</p>
-                    <input id="email" type="email" placeholder="ObiMusaAde@gmail.com">
-                </div>
+    <div class="email">
+        <p>Email</p>
+        <input id="email" type="email" placeholder="ObiMusaAde@gmail.com" required>
+    </div>
 
-                <div class="phone">
-                    <p>Phone Number</p>
-                    <input id="phone-number" type="text" placeholder="08142345678">
-                </div>
+    <div class="phone">
+        <p>Phone Number</p>
+        <input id="phone-number" type="text" placeholder="08142345678" required>
+    </div>
 
-                <div class="message">
-                    <textarea id="textarea" placeholder="Write your message" rows="5"></textarea>
-                </div>
+    <div class="message">
+        <textarea id="textarea" placeholder="Write your message" rows="5" required></textarea>
+    </div>
 
-                <button class="contact-btn" type="submit" onclick="sendMail()">Send Message</button>
-            </form>
+    <button class="contact-btn" type="submit">
+        Send Message
+    </button>
+</form>
 
             <div class="contact-details">
                 <h5>Contact us on</h5>
