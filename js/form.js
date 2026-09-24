@@ -28,7 +28,7 @@ contactForm.addEventListener(
             document.querySelector(
                 'input[name="first-time"]:checked'
             );
-            
+
         if (!gender) {
 
             alert(
@@ -100,12 +100,6 @@ contactForm.addEventListener(
         };
 
 
-        console.log(
-            "Registration data:",
-            params
-        );
-
-
         // =================================================
         // DISABLE BUTTON
         // =================================================
@@ -145,20 +139,8 @@ contactForm.addEventListener(
                 await googleSheetResponse.text();
 
 
-            console.log(
-                "Google Sheets raw response:",
-                responseText
-            );
-
-
             const result =
                 JSON.parse(responseText);
-
-
-            console.log(
-                "Google Sheets result:",
-                result
-            );
 
 
             // =================================================
@@ -204,12 +186,6 @@ contactForm.addEventListener(
                 result.registrationNumber;
 
 
-            console.log(
-                "Registration Number:",
-                registrationNumber
-            );
-
-
             // =================================================
             // 2. SEND ADMIN EMAIL THROUGH EMAILJS
             // =================================================
@@ -245,11 +221,7 @@ contactForm.addEventListener(
 
             alert(
 
-                "Registration submitted successfully!\n\n" +
-
-                "Your Registration Number is:\n" +
-
-                registrationNumber
+                "Registration submitted successfully!\n\n" 
 
             );
 
