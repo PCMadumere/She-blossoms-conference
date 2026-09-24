@@ -1,90 +1,569 @@
-.contact{ 
-    padding: 100px 20px;
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    box-sizing: border-box;
 }
 
-.contact.section{
-    margin: 5rem auto;
-}
-
-.contact h3{
-    font-size: 3rem;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-us{
-    max-width: 70rem;
-    background: linear-gradient(#53174ee5, #142650e5), url(/images/bg-texture-red.jpg);
-    background-position: bottom center;
-    background-size: cover;
-    color: #fff;
-    padding: 2rem;
-    margin: auto;
-    display: flex;
-    gap: 2rem;
-    border-radius: 10px;
-    margin-bottom: 4rem;
-}
-
-form{
-    width: 50%; 
-    display: flex;
-    flex-direction: column;
-}
-
-.email{
-    margin: 15px 0;
-}
-
-.message{
-    margin: 15px 0;
-}
-
-::placeholder{
-    padding: 5px;
-    font-size: 12px;
-}
-
-.contact input,
-.contact textarea{
-    padding: 10px;
-    font-size: 16px;
-    background: transparent;
+html {
     width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-.contact-btn{
-    padding: 12px;
-    font-size: 18px;
-    background: pink;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 0 2px #c27707;
-    cursor: pointer;
-    transition: background-color 0.3s;
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10, 30, 75, 0.88),
+            rgba(20, 70, 150, 0.78)
+        ),
+        url("/images/bg-texture-red.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
 }
 
-.contact button:hover{
-    color: #0f172a;
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 80px 20px;
+
+    box-sizing: border-box;
 }
 
-.contact-details{
-    width: 50%;
+.contact.section {
+    margin: 0;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.contact h3 {
+    margin: 0 0 35px;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   MAIN CONTACT CARD
+========================================= */
+
+.contact-us {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 40px;
+
+    /*
+        Transparent blue glass
+    */
+    background: rgba(7, 25, 65, 0.58);
+
+    /*
+        Subtle white border
+    */
+    border: 1px solid rgba(255, 255, 255, 0.30);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+#contact-form {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+
+    gap: 18px;
 }
 
-.contact-details p{
-    margin-top: 15px;
-    color: #fff;
+
+/* Prevent fields from causing horizontal movement */
+
+#contact-form > div {
+    width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
 }
 
-.contact-details h5{
-    font-size: 1.5rem;
+
+/* =========================================
+   FORM LABELS
+========================================= */
+
+#contact-form p {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.contact input:not([type="radio"]),
+.contact textarea {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    border: 1px solid rgba(255, 255, 255, 0.50);
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+
+    opacity: 1;
+
+    padding: 0;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.contact input:not([type="radio"]):focus,
+.contact textarea:focus {
+    background: rgba(10, 40, 100, 0.45);
+
+    border-color: #f7a8d8;
+
+    box-shadow:
+        0 0 0 3px rgba(247, 168, 216, 0.20);
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.contact textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* =========================================
+   GENDER / FIRST TIME
+========================================= */
+
+.gender,
+.first-time {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* Radio labels */
+
+.gender label,
+.first-time label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    cursor: pointer;
+
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Radio buttons */
+
+.contact input[type="radio"] {
+    width: 18px;
+    height: 18px;
+
+    margin: 0;
+
+    accent-color: #f7a8d8;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.contact-btn {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    margin-top: 5px;
+
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #ffb6df,
+        #ec4899
+    );
+
+    color: #071941;
+
+    font-family: inherit;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(236, 72, 153, 0.35);
+
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* Button hover - does NOT move */
+
+.contact-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #ffd1eb,
+        #f472b6
+    );
+
+    box-shadow:
+        0 10px 25px rgba(236, 72, 153, 0.35);
+}
+
+
+/* Disabled button */
+
+.contact-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.contact-details {
+    width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    /*
+        This creates proper internal spacing
+        rather than making the content look attached.
+    */
+    padding: 35px 30px;
+
+    /*
+        Separates the two sides while keeping
+        everything inside the same card.
+    */
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================
+   CONTACT DETAILS HEADING
+========================================= */
+
+.contact-details h5 {
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: 1.7rem;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   CONTACT DETAILS TEXT
+========================================= */
+
+.contact-details p {
+    margin: 0 0 18px;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .contact-us {
+        max-width: 650px;
+
+        grid-template-columns: 1fr;
+
+        padding: 35px 30px;
+
+        gap: 35px;
+    }
+
+
+    /* Horizontal divider on smaller screens */
+
+    .contact-details {
+        padding: 30px 10px 10px;
+
+        border-left: none;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+
+    #contact-form {
+        gap: 18px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .contact {
+        padding: 45px 12px;
+    }
+
+
+    .contact h3 {
+        font-size: 2rem;
+
+        margin-bottom: 25px;
+    }
+
+
+    .contact-us {
+        width: 100%;
+
+        padding: 28px 20px;
+
+        gap: 30px;
+
+        border-radius: 16px;
+    }
+
+
+    #contact-form {
+        gap: 17px;
+    }
+
+
+    #contact-form p {
+        margin-bottom: 7px;
+
+        font-size: 14px;
+    }
+
+
+    .contact input:not([type="radio"]),
+    .contact textarea {
+        padding: 13px 14px;
+
+        font-size: 14px;
+    }
+
+
+    .contact textarea {
+        min-height: 120px;
+    }
+
+
+    .contact-btn {
+        padding: 14px;
+
+        font-size: 15px;
+    }
+
+
+    .contact-details {
+        padding: 25px 5px 5px;
+    }
+
+
+    .contact-details h5 {
+        font-size: 1.4rem;
+
+        margin-bottom: 15px;
+    }
+
+
+    .contact-details p {
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin-bottom: 14px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 350px) {
+
+    .contact {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
+    .contact-us {
+        padding: 24px 15px;
+    }
+
+
+    .contact h3 {
+        font-size: 1.7rem;
+    }
 }
