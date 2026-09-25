@@ -1,122 +1,78 @@
 /* =========================================
-   GLOBAL
+   REGISTER INTRO
 ========================================= */
-
-* {
-    box-sizing: border-box;
-}
 
 html {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
-body {
-    width: 100%;
-    min-height: 100vh;
+/* =========================================
+   REGISTER INTRO
+========================================= */
 
-    margin: 0;
-    padding: 0;
+.register-intro {
+    margin-bottom: 35px;
+}
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(10, 30, 75, 0.88),
-            rgba(20, 70, 150, 0.78)
-        ),
-        url("/images/bg-texture-red.jpg");
+.register-intro h2 {
+    margin: 0 0 8px;
 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    font-weight: 600;
+
+    font-size: 3.5rem;
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
 
     color: #ffffff;
-
-    overflow-x: hidden;
 }
 
-
-/* =========================================
-   CONTACT SECTION
-========================================= */
-
-.contact {
-    width: 100%;
-    min-height: 100vh;
-
+.register-intro p {
     margin: 0;
-    padding: 80px 20px;
 
-    box-sizing: border-box;
-}
+    font-size: 2rem;
 
-.contact.section {
-    margin: 0;
+    line-height: 1.5;
 }
 
 
 /* =========================================
-   TITLE
+   FORM CONTAINER / BORDER
 ========================================= */
 
-.contact h3 {
-    margin: 0 0 35px;
-
-    color: #ffffff;
-
-    text-align: center;
-
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-
-    line-height: 1.2;
-
-    text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.45);
-}
-
-
-/* =========================================
-   MAIN CONTACT CARD
-========================================= */
-
-.contact-us {
+.register-cta .contact-us {
     width: 100%;
-    max-width: 1050px;
 
-    margin: 0 auto;
-
-    padding: 40px;
+    padding: 35px;
 
     box-sizing: border-box;
 
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
-    gap: 40px;
-
-    /*
-        Transparent blue glass
-    */
-    background: rgba(7, 25, 65, 0.58);
-
-    /*
-        Subtle white border
-    */
-    border: 1px solid rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(
+        255,
+        182,
+        223,
+        0.35
+    );
 
     border-radius: 20px;
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(
+        7,
+        25,
+        65,
+        0.18
+    );
 
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.35);
+        0 20px 50px rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
 }
 
 
@@ -124,48 +80,57 @@ body {
    FORM
 ========================================= */
 
-#contact-form {
+.register-cta #contact-form {
     width: 100%;
-    max-width: 100%;
-
-    margin: 0;
-    padding: 0;
-
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 18px;
-}
-
-
-/* Prevent fields from causing horizontal movement */
-
-#contact-form > div {
-    width: 100%;
-    min-width: 0;
-
-    box-sizing: border-box;
 }
 
 
 /* =========================================
-   FORM LABELS
+   FORM ROW
 ========================================= */
 
-#contact-form p {
-    margin: 0 0 8px;
+.register-cta .form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    width: 100%;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   FORM FIELD
+========================================= */
+
+.register-cta .form-field {
+    width: 100%;
+}
+
+.register-cta .form-field.full-width {
+    width: 100%;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.register-cta .form-field p {
+    margin: 0 0 7px;
+
+    font-size: 1.5rem;
+
+    font-weight: 600;
+
+    line-height: 1.3;
 
     color: #ffffff;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    line-height: 1.4;
-
-    text-shadow:
-        0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -173,61 +138,36 @@ body {
    INPUTS
 ========================================= */
 
-.contact input:not([type="radio"]),
-.contact textarea {
-    width: 100%;
-    max-width: 100%;
+.register-cta .form-field input[type="email"],
+.register-cta .form-field input[type="text"],
+.register-cta .form-field input[type="tel"] {
 
-    padding: 14px 16px;
+    display: block;
+
+    width: 100%;
+
+    height: 48px;
 
     box-sizing: border-box;
 
-    background: rgba(0, 0, 0, 0.25);
+    padding: 0 14px;
 
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.18
+    );
 
-    border-radius: 10px;
-
-    color: #ffffff;
-
-    font-family: inherit;
-    font-size: 15px;
+    border-radius: 8px;
 
     outline: none;
 
-    transition:
-        border-color 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
-}
+    background: #ffffff;
 
+    color: #172033;
 
-/* =========================================
-   PLACEHOLDER
-========================================= */
-
-.contact input::placeholder,
-.contact textarea::placeholder {
-    color: rgba(255, 255, 255, 0.75);
-
-    opacity: 1;
-
-    padding: 0;
-}
-
-
-/* =========================================
-   INPUT FOCUS
-========================================= */
-
-.contact input:not([type="radio"]):focus,
-.contact textarea:focus {
-    background: rgba(10, 40, 100, 0.45);
-
-    border-color: #f7a8d8;
-
-    box-shadow:
-        0 0 0 3px rgba(247, 168, 216, 0.20);
+    font-size: 20px;
 }
 
 
@@ -235,63 +175,128 @@ body {
    TEXTAREA
 ========================================= */
 
-.contact textarea {
-    min-height: 130px;
+.register-cta .form-field textarea {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 110px;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.18
+    );
+
+    border-radius: 8px;
+
+    outline: none;
 
     resize: vertical;
+
+    background: #ffffff;
+
+    color: #172033;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 20px;
+
+    line-height: 1.5;
 }
 
 
 /* =========================================
-   GENDER / FIRST TIME
+   PLACEHOLDER
 ========================================= */
 
-.gender,
-.first-time {
-    width: 100%;
+.register-cta .form-field input::placeholder,
+.register-cta .form-field textarea::placeholder {
 
-    display: flex;
-    flex-direction: column;
+    color: #7b8190;
 
-    gap: 10px;
+    opacity: 1;
 }
 
 
-/* Radio labels */
+/* =========================================
+   FOCUS
+========================================= */
 
-.gender label,
-.first-time label {
+.register-cta .form-field input:focus,
+.register-cta .form-field textarea:focus {
+
+    border-color: #ec4899;
+
+    box-shadow:
+        0 0 0 3px rgba(
+            236,
+            72,
+            153,
+            0.15
+        );
+}
+
+
+/* =========================================
+   RADIO FIELD
+========================================= */
+
+.register-cta .radio-field {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    column-gap: 20px;
+
+    row-gap: 8px;
+}
+
+.register-cta .radio-field p {
+
+    width: 100%;
+
+    margin-bottom: 2px;
+}
+
+.register-cta .radio-field label {
+
     display: flex;
 
     align-items: center;
 
-    gap: 10px;
+    gap: 7px;
 
-    color: #ffffff;
+    font-size: 20px;
 
-    font-size: 15px;
-    font-weight: 500;
-
-    line-height: 1.4;
+    color: rgba(
+        255,
+        255,
+        255,
+        0.9
+    );
 
     cursor: pointer;
-
-    text-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+.register-cta .radio-field input[type="radio"] {
 
-/* Radio buttons */
+    width: 15px;
 
-.contact input[type="radio"] {
-    width: 18px;
-    height: 18px;
+    height: 15px;
 
     margin: 0;
 
-    accent-color: #f7a8d8;
-
-    cursor: pointer;
+    accent-color: #ec4899;
 }
 
 
@@ -299,167 +304,49 @@ body {
    SEND BUTTON
 ========================================= */
 
-.contact-btn {
+.register-cta .contact-btn {
+
     width: 100%;
 
-    padding: 14px 20px;
+    height: 50px;
 
     margin-top: 5px;
 
-    box-sizing: border-box;
-
     border: none;
-    border-radius: 10px;
 
-    background: linear-gradient(
-        135deg,
-        #ffb6df,
-        #ec4899
-    );
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ec4899,
+            #f472b6
+        );
 
     color: #071941;
 
-    font-family: inherit;
+    font-size: 1.5rem;
 
-    font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
 
     cursor: pointer;
 
-    box-shadow:
-        0 8px 25px rgba(236, 72, 153, 0.35);
-
     transition:
-        background 0.2s ease,
-        box-shadow 0.2s ease,
-        opacity 0.2s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
+.register-cta .contact-btn:hover {
 
-/* Button hover - does NOT move */
-
-.contact-btn:hover {
-    background: linear-gradient(
-        135deg,
-        #ffd1eb,
-        #f472b6
-    );
+    transform: translateY(-2px);
 
     box-shadow:
-        0 10px 25px rgba(236, 72, 153, 0.35);
-}
-
-
-/* Disabled button */
-
-.contact-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-
-/* =========================================
-   CONTACT DETAILS
-========================================= */
-
-.contact-details {
-    width: 100%;
-    min-width: 0;
-
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-
-    /*
-        This creates proper internal spacing
-        rather than making the content look attached.
-    */
-    padding: 35px 30px;
-
-    /*
-        Separates the two sides while keeping
-        everything inside the same card.
-    */
-    border-left: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-
-/* =========================================
-   CONTACT DETAILS HEADING
-========================================= */
-
-.contact-details h5 {
-    margin: 0 0 20px;
-
-    color: #ffffff;
-
-    font-size: 1.7rem;
-
-    font-weight: 800;
-
-    line-height: 1.3;
-
-    text-shadow:
-        0 2px 6px rgba(0, 0, 0, 0.45);
-}
-
-
-/* =========================================
-   CONTACT DETAILS TEXT
-========================================= */
-
-.contact-details p {
-    margin: 0 0 18px;
-
-    color: rgba(255, 255, 255, 0.92);
-
-    font-size: 15px;
-
-    line-height: 1.8;
-
-    text-shadow:
-        0 1px 4px rgba(0, 0, 0, 0.45);
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 800px) {
-
-    .contact {
-        padding: 60px 20px;
-    }
-
-    .contact-us {
-        max-width: 650px;
-
-        grid-template-columns: 1fr;
-
-        padding: 35px 30px;
-
-        gap: 35px;
-    }
-
-
-    /* Horizontal divider on smaller screens */
-
-    .contact-details {
-        padding: 30px 10px 10px;
-
-        border-left: none;
-
-        border-top: 1px solid rgba(255, 255, 255, 0.18);
-    }
-
-
-    #contact-form {
-        gap: 18px;
-    }
+        0 12px 28px rgba(
+            236,
+            72,
+            153,
+            0.30
+        );
 }
 
 
@@ -467,103 +354,43 @@ body {
    MOBILE
 ========================================= */
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
-    .contact {
-        padding: 45px 12px;
+    .register-intro {
+
+        margin-bottom: 28px;
     }
 
+    .register-intro h2 {
 
-    .contact h3 {
-        font-size: 2rem;
-
-        margin-bottom: 25px;
+        font-size: 38px;
     }
 
-
-    .contact-us {
-        width: 100%;
-
-        padding: 28px 20px;
-
-        gap: 30px;
-
-        border-radius: 16px;
-    }
-
-
-    #contact-form {
-        gap: 17px;
-    }
-
-
-    #contact-form p {
-        margin-bottom: 7px;
-
-        font-size: 14px;
-    }
-
-
-    .contact input:not([type="radio"]),
-    .contact textarea {
-        padding: 13px 14px;
-
-        font-size: 14px;
-    }
-
-
-    .contact textarea {
-        min-height: 120px;
-    }
-
-
-    .contact-btn {
-        padding: 14px;
+    .register-intro p {
 
         font-size: 15px;
     }
 
+    .register-cta .contact-us {
 
-    .contact-details {
-        padding: 25px 5px 5px;
+        padding: 22px;
+
+        border-radius: 16px;
     }
 
+    .register-cta .form-row {
 
-    .contact-details h5 {
-        font-size: 1.4rem;
+        grid-template-columns: 1fr;
 
-        margin-bottom: 15px;
+        gap: 18px;
+
+        margin-bottom: 18px;
     }
 
+    .register-cta .form-field input[type="email"],
+    .register-cta .form-field input[type="text"],
+    .register-cta .form-field input[type="tel"] {
 
-    .contact-details p {
-        font-size: 14px;
-
-        line-height: 1.7;
-
-        margin-bottom: 14px;
-    }
-}
-
-
-/* =========================================
-   VERY SMALL PHONES
-========================================= */
-
-@media (max-width: 350px) {
-
-    .contact {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-
-    .contact-us {
-        padding: 24px 15px;
-    }
-
-
-    .contact h3 {
-        font-size: 1.7rem;
+        height: 47px;
     }
 }

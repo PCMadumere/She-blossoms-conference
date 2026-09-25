@@ -17,6 +17,8 @@
   <script src="/js/image-slider.js" defer></script>
   <script src="/js/form.js" defer></script>
   <script src="/js/countdown.js" defer></script>
+  <link rel="stylesheet" href="/css/form.css">
+    <script src="/js/form.js" defer></script>
 
    <!-- Script for emailjs -->
     <script type="text/javascript"
@@ -841,41 +843,163 @@
         <div class="slider-nav w-slider-nav w-round"></div>
       </div>
     </div>
+
+    <!-- REGISTRATION -->
     <div id="register" class="register-cta">
       <div class="svg__register-top-curve"></div>
       <div class="cta-overlay">
         <div class="container">
-          <div class="flex-between">
-            <div>
-              <h2>Register</h2>
-            </div>
-            <div>
-              <div itemscope="itemscope" itemtype="https://schema.org/AggregateOffer" itemprop="offers"
-                class="flex-horizontal">
-                <div data-w-id="c467564b-a1df-27a1-32ee-ed276f3f6667" style="opacity:0" class="register-child">
-                  <h3 class="h3-speaker">FREE ADMISSION</h3>
-                  <h3 itemprop="highPrice" class="mb-30">Open to every woman. Reserve your seat.</h3>
-                </div>
-                <div data-w-id="96d7efa6-2679-73ff-c0b8-73ec993fb3d3" style="opacity:0" class="register-child ml-50">
-                  <!-- <h3 class="h3-speaker">Student Admission</h3> -->
-                  <!-- <h3 itemprop="lowPrice" class="mb-30">$49</h3> -->
-                </div>
-                <div class="display-none">
-                  <div itemprop="availability">In Stock</div>
-                  <div itemprop="priceCurrency">USD</div>
-                  <div itemprop="url"><a
-                      href="https://forms.gle/FEyEK2WKtBPYnewW9"></a>
-                  </div>
-                </div>
-              </div>
-              <div data-w-id="991042c0-2404-c864-263d-cb8a59b57a90" style="opacity:0" class="w-embed w-script"><a href="https://forms.gle/FEyEK2WKtBPYnewW9"
-                    rel="noopener noreferrer" target="_blank">
-                <button class="button register-button"
-                  type="button">Register</button></a>
-              </div>
-            </div>
-          </div>
+           <div class="contact-us">
+
+    <div class="register-intro">
+        <h2>Register Here for Free</h2>
+        <p>Open to every woman. Reserve your seat.</p>
+    </div>
+
+    <form id="contact-form">
+
+        <!-- EMAIL -->
+        <div class="form-field full-width">
+            <p>Email Address</p>
+            <input
+                id="email"
+                type="email"
+                placeholder="Enter your email address"
+                required
+            >
         </div>
+
+
+        <!-- FULL NAME + PHONE -->
+        <div class="form-row">
+
+            <div class="form-field">
+                <p>Full Name</p>
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-field">
+                <p>Phone Number</p>
+                <input
+                    id="phone-number"
+                    type="tel"
+                    placeholder="08142345678"
+                    required
+                >
+            </div>
+
+        </div>
+
+
+        <!-- ADDRESS + OCCUPATION -->
+        <div class="form-row">
+
+            <div class="form-field">
+                <p>Address</p>
+                <input
+                    id="address"
+                    type="text"
+                    placeholder="Enter your address"
+                    required
+                >
+            </div>
+
+            <div class="form-field">
+                <p>Occupation</p>
+                <input
+                    id="occupation"
+                    type="text"
+                    placeholder="Enter your occupation"
+                    required
+                >
+            </div>
+
+        </div>
+
+
+        <!-- GENDER + FIRST TIME -->
+        <div class="form-row">
+
+            <div class="form-field radio-field">
+                <p>Gender</p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                        required
+                    >
+                    Female
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                    >
+                    Male
+                </label>
+            </div>
+
+
+            <div class="form-field radio-field">
+                <p>First Time?</p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="first-time"
+                        value="YES"
+                        required
+                    >
+                    YES
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="first-time"
+                        value="NO"
+                    >
+                    NO
+                </label>
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+        <div class="form-field full-width">
+            <p>Message</p>
+
+            <textarea
+                id="textarea"
+                placeholder="Write your message"
+                rows="4"
+            ></textarea>
+        </div>
+
+
+        <!-- BUTTON -->
+        <button
+            class="contact-btn"
+            type="submit"
+            id="send-button"
+        >
+            Send Message
+        </button>
+
+    </form>
+
+</div>
+</div>
       </div><img
         src="https://cdn.prod.website-files.com/5db723eefbe1d737beb3a228/5db723eefbe1d7518ab3a262_svg__theme-bottom-curve.svg"
         alt="" class="svg__register-bottom-curve" />
@@ -969,9 +1093,7 @@
     <div class="circle-img-container">
       <div class="circle-img-flex">
         <div><img
-            src="images/1H4A0007-1000w.webp" alt="" class="circle-img" style="border-radius: 50%;" 
-  srcset="images/1H4A0007-400w.webp 400w, images/1H4A0007-600w.webp 600w, images/1H4A0007-800w.webp 800w, images/1H4A0007-1000w.webp 1000w, images/become-volunteer.jpg1H4A0007-1200w.webp 1200w, images/become-volunteer.jpg1H4A0007-1600w.webp 1600w, images/1H4A0007-2000w.webp 2000w"
-  sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px"
+            src="images/1H4A0007-1000w.webp" alt="" class="circle-img" style="border-radius: 50%;"
   alt=""
   width="839"
   loading="lazy"
