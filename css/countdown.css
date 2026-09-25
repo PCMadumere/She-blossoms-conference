@@ -1,0 +1,156 @@
+.countdown {
+    display: flex;
+    gap: 14px;
+    line-height: 0;
+}
+
+.countdown-item {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.countdown-item span {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+
+    color: #ffffff;
+}
+
+.countdown-item small {
+    margin-top: 8px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #ffb6df;
+}
+
+.countdown-finished {
+    /* width: min(100%, 600px); */
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+.countdown-finished h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: #ffffff;
+}
+
+.countdown-finished p {
+    max-width: 480px;
+    margin: 10px auto 0;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .countdown {
+        gap: 7px;
+    }
+
+    .countdown-item {
+        width: 68px;
+        height: 68px;
+        border-radius: 13px;
+    }
+
+    .countdown-item span {
+        font-size: 21px;
+        letter-spacing: -0.3px;
+    }
+
+    .countdown-item small {
+        font-size: 8px;
+        letter-spacing: 0.7px;
+        margin-top: 5px;
+    }
+
+    .countdown-finished {
+        padding: 25px 18px;
+        border-radius: 20px;
+    }
+
+    .finished-icon {
+        font-size: 32px;
+    }
+
+    .countdown-finished h2 {
+        font-size: 23px;
+    }
+
+    .countdown-finished p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .countdown {
+        gap: 8px;
+    }
+
+    .countdown-item {
+        width: 70px;
+        height: 70px;
+        border-radius: 14px;
+    }
+
+    .countdown-item span {
+        font-size: 24px;
+    }
+
+    .countdown-item small {
+        font-size: 9px;
+    }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+    .countdown {
+        gap: 12px;
+    }
+
+    .countdown-item {
+        width: 80px;
+        height: 80px;
+        border-radius: 16px;
+    }
+
+    .countdown-item span {
+        font-size: 25px;
+    }
+
+    .countdown-item small {
+        font-size: 9px;
+        margin-top: 6px;
+    }
+}
+
+
+
+
+

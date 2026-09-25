@@ -1,0 +1,1747 @@
+/* ============================================================
+   SHE BLOSSOMS '26
+   MY CARD PAGE
+   BLUE + PINK THEME
+============================================================ */
+
+
+/* ============================================================
+   VARIABLES
+============================================================ */
+
+.card-page {
+
+    --card-navy: #071941;
+
+    --card-blue: #123b82;
+
+    --card-blue-light: #2467bd;
+
+    --card-pink: #ec4899;
+
+    --card-pink-light: #ffb6df;
+
+    --card-white: #ffffff;
+
+    --card-background: #f6f8fc;
+
+    --card-text: #172033;
+
+    --card-muted: #667085;
+
+    --card-border:
+        rgba(7, 25, 65, 0.12);
+
+}
+
+
+/* ============================================================
+   BODY
+============================================================ */
+
+body.card-page {
+
+    margin: 0;
+
+    background:
+
+        radial-gradient(
+            circle at 0% 10%,
+            rgba(236, 72, 153, 0.10),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 100% 30%,
+            rgba(36, 103, 189, 0.11),
+            transparent 30%
+        ),
+
+        var(--card-background);
+
+    color: var(--card-text);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.card-container {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin:
+        0 auto;
+
+}
+
+
+/* ============================================================
+   NAVIGATION OVERRIDES
+   Keeps the same website navigation but makes this page
+   active without creating a completely different navbar.
+============================================================ */
+
+.card-page .card-active-link .nav-text {
+
+    color:
+        var(--card-pink);
+
+}
+
+
+.card-page .nav_button {
+
+    color:
+        var(--card-navy);
+
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.card-hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(236, 72, 153, 0.34),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(36, 103, 189, 0.32),
+            transparent 34%
+        ),
+
+        linear-gradient(
+            135deg,
+            #071941 0%,
+            #123b82 58%,
+            #2467bd 100%
+        );
+
+    color:
+        var(--card-white);
+
+}
+
+
+.card-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(7, 25, 65, 0.25),
+            transparent 50%,
+            rgba(236, 72, 153, 0.10)
+        );
+
+    pointer-events: none;
+
+}
+
+
+.card-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding:
+        clamp(75px, 9vw, 125px)
+        0
+        clamp(70px, 8vw, 110px);
+
+}
+
+
+.card-eyebrow {
+
+    margin:
+        0
+        0
+        18px;
+
+    color:
+        var(--card-pink-light);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        3.5px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.card-hero h1 {
+
+    max-width:
+        850px;
+
+    margin:
+        0;
+
+    color:
+        var(--card-white);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            48px,
+            7vw,
+            86px
+        );
+
+    font-weight:
+        600;
+
+    line-height:
+        1.02;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+.card-hero-text {
+
+    max-width:
+        540px;
+
+    margin:
+        28px
+        0
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.76);
+
+    font-size:
+        18px;
+
+    line-height:
+        1.65;
+
+}
+
+
+/* ============================================================
+   CARD MAKER
+============================================================ */
+
+.card-maker-section {
+
+    padding:
+        clamp(70px, 9vw, 110px)
+        0;
+
+}
+
+
+.card-maker-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(280px, 0.72fr)
+        minmax(500px, 1.28fr);
+
+    gap:
+        clamp(50px, 8vw, 100px);
+
+    align-items:
+        start;
+
+}
+
+
+/* ============================================================
+   SECTION HEADING
+============================================================ */
+
+.card-section-heading {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        16px;
+
+    margin:
+        0
+        0
+        42px;
+
+}
+
+
+.card-section-heading > span {
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        var(--card-pink);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--card-pink);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+}
+
+
+.card-section-heading p {
+
+    margin:
+        0
+        7px;
+
+    color:
+        var(--card-blue);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2.5px;
+
+}
+
+
+.card-section-heading h2 {
+
+    margin:
+        0;
+
+    color:
+        var(--card-navy);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        38px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.1;
+
+}
+
+
+.card-section-heading.centered {
+
+    justify-content:
+        center;
+
+}
+
+
+/* ============================================================
+   FORM
+============================================================ */
+
+.card-field {
+
+    margin:
+        0
+        0
+        28px;
+
+}
+
+
+.card-field > label:first-child {
+
+    display:
+        block;
+
+    margin:
+        0
+        0
+        9px;
+
+    color:
+        var(--card-navy);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+}
+
+
+.card-field input[type="text"] {
+
+    width:
+        100%;
+
+    height:
+        54px;
+
+    padding:
+        0
+        16px;
+
+    border:
+        1px solid
+        rgba(7, 25, 65, 0.14);
+
+    border-radius:
+        7px;
+
+    outline:
+        none;
+
+    background:
+        var(--card-white);
+
+    color:
+        var(--card-navy);
+
+    font-size:
+        15px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.card-field input[type="text"]:focus {
+
+    border-color:
+        var(--card-blue-light);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(36, 103, 189, 0.10);
+
+}
+
+
+.card-field input[type="text"]::placeholder {
+
+    color:
+        #98a2b3;
+
+}
+
+
+.card-field small {
+
+    display:
+        block;
+
+    margin:
+        8px
+        0
+        0;
+
+    color:
+        var(--card-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.5;
+
+}
+
+
+/* ============================================================
+   PHOTO UPLOAD
+============================================================ */
+
+.photo-upload {
+
+    min-height:
+        120px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        5px;
+
+    border:
+        1.5px dashed
+        rgba(36, 103, 189, 0.32);
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(255, 255, 255, 0.65);
+
+    cursor:
+        pointer;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+
+}
+
+
+.photo-upload:hover {
+
+    border-color:
+        var(--card-pink);
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.upload-plus {
+
+    width:
+        32px;
+
+    height:
+        32px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        0
+        0
+        4px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(236, 72, 153, 0.12);
+
+    color:
+        var(--card-pink);
+
+    font-size:
+        22px;
+
+}
+
+
+.photo-upload strong {
+
+    color:
+        var(--card-navy);
+
+    font-size:
+        14px;
+
+}
+
+
+.photo-upload small {
+
+    margin:
+        0;
+
+    color:
+        var(--card-muted);
+
+    font-size:
+        12px;
+
+}
+
+
+/* ============================================================
+   PHOTO ADJUSTMENT
+============================================================ */
+
+.photo-adjustment {
+
+    margin:
+        35px
+        0;
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        rgba(7, 25, 65, 0.08);
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+}
+
+
+.adjustment-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    margin:
+        0
+        0
+        14px;
+
+}
+
+
+.adjustment-top label {
+
+    color:
+        var(--card-navy);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+}
+
+
+.adjustment-top span {
+
+    color:
+        var(--card-pink);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+}
+
+
+.photo-adjustment input[type="range"] {
+
+    width:
+        100%;
+
+    accent-color:
+        var(--card-pink);
+
+    cursor:
+        pointer;
+
+}
+
+
+.photo-adjustment p {
+
+    margin:
+        10px
+        0
+        0;
+
+    color:
+        var(--card-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.5;
+
+}
+
+
+/* ============================================================
+   ACTIONS
+============================================================ */
+
+.card-actions {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+
+}
+
+
+.card-primary-button,
+.card-secondary-button {
+
+    width:
+        100%;
+
+    min-height:
+        52px;
+
+    border-radius:
+        5px;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        .2s ease;
+
+}
+
+
+.card-primary-button {
+
+    border:
+        1px solid
+        var(--card-pink);
+
+    background:
+        var(--card-pink);
+
+    color:
+        var(--card-white);
+
+}
+
+
+.card-primary-button:hover {
+
+    background:
+        #d93686;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.card-secondary-button {
+
+    border:
+        1px solid
+        var(--card-blue);
+
+    background:
+        transparent;
+
+    color:
+        var(--card-blue);
+
+}
+
+
+.card-secondary-button:hover {
+
+    background:
+        var(--card-blue);
+
+    color:
+        var(--card-white);
+
+}
+
+
+.card-reset-button {
+
+    padding:
+        10px;
+
+    border:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        var(--card-muted);
+
+    font-size:
+        12px;
+
+    cursor:
+        pointer;
+
+}
+
+
+.card-reset-button:hover {
+
+    color:
+        var(--card-pink);
+
+}
+
+
+.card-message {
+
+    min-height:
+        20px;
+
+    margin:
+        15px
+        0
+        0;
+
+    color:
+        var(--card-blue);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.5;
+
+    text-align:
+        center;
+
+}
+
+
+/* ============================================================
+   PREVIEW
+============================================================ */
+
+.card-preview-area {
+
+    min-width:
+        0;
+
+}
+
+
+.preview-heading {
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    margin:
+        0
+        0
+        22px;
+
+}
+
+
+.preview-heading p {
+
+    margin:
+        0
+        7px;
+
+    color:
+        var(--card-blue);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2.5px;
+
+}
+
+
+.preview-heading h2 {
+
+    margin:
+        0;
+
+    color:
+        var(--card-navy);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        31px;
+
+    font-weight:
+        600;
+
+}
+
+
+.preview-heading > span {
+
+    color:
+        var(--card-muted);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.3px;
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* ============================================================
+   CANVAS
+============================================================ */
+
+.canvas-container {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    max-width:
+        680px;
+
+    margin:
+        0
+        0
+        0
+        auto;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        12px;
+
+    background:
+        #dce4f0;
+
+    box-shadow:
+        0 30px 70px
+        rgba(7, 25, 65, 0.16);
+
+    touch-action:
+        none;
+
+    user-select:
+        none;
+
+}
+
+
+.canvas-container canvas {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    cursor:
+        grab;
+
+    touch-action:
+        none;
+
+}
+
+
+.canvas-container canvas.dragging {
+
+    cursor:
+        grabbing;
+
+}
+
+
+.canvas-hint {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        18px;
+
+    transform:
+        translateX(-50%);
+
+    padding:
+        9px
+        15px;
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(7, 25, 65, 0.78);
+
+    color:
+        var(--card-white);
+
+    font-size:
+        11px;
+
+    white-space:
+        nowrap;
+
+    pointer-events:
+        none;
+
+    transition:
+        opacity .2s ease;
+
+}
+
+
+.canvas-hint.hidden {
+
+    opacity:
+        0;
+
+}
+
+
+/* ============================================================
+   CONFERENCE
+============================================================ */
+
+.card-conference {
+
+    padding:
+        100px
+        0;
+
+    background:
+
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(236, 72, 153, 0.25),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--card-navy),
+            var(--card-blue)
+        );
+
+    color:
+        var(--card-white);
+
+}
+
+
+.conference-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:
+        90px;
+
+}
+
+
+.card-conference .card-eyebrow {
+
+    color:
+        var(--card-pink-light);
+
+}
+
+
+.card-conference h2 {
+
+    margin:
+        0;
+
+    color:
+        var(--card-white);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            45px,
+            5vw,
+            68px
+        );
+
+    font-weight:
+        600;
+
+    line-height:
+        1.02;
+
+}
+
+
+.conference-details {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+}
+
+
+.conference-detail {
+
+    padding:
+        25px
+        0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.13);
+
+}
+
+
+.conference-detail:first-child {
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.13);
+
+}
+
+
+.conference-detail span {
+
+    display:
+        block;
+
+    margin:
+        0
+        0
+        8px;
+
+    color:
+        var(--card-pink-light);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.conference-detail strong {
+
+    display:
+        block;
+
+    color:
+        rgba(255,255,255,0.90);
+
+    font-size:
+        16px;
+
+    font-weight:
+        500;
+
+    line-height:
+        1.5;
+
+}
+
+
+/* ============================================================
+   HOW IT WORKS
+============================================================ */
+
+.card-how {
+
+    padding:
+        100px
+        0;
+
+}
+
+
+.card-steps {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        25px;
+
+}
+
+
+.card-step {
+
+    padding:
+        30px;
+
+    border:
+        1px solid
+        rgba(7,25,65,0.10);
+
+    border-radius:
+        8px;
+
+    background:
+        rgba(255,255,255,0.70);
+
+}
+
+
+.card-step > span {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        0
+        0
+        22px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(236,72,153,0.12);
+
+    color:
+        var(--card-pink);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+}
+
+
+.card-step h3 {
+
+    margin:
+        0
+        0
+        9px;
+
+    color:
+        var(--card-navy);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        24px;
+
+    font-weight:
+        600;
+
+}
+
+
+.card-step p {
+
+    margin:
+        0;
+
+    color:
+        var(--card-muted);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.6;
+
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.card-footer {
+
+    padding:
+        55px
+        0
+        25px;
+
+    background:
+        var(--card-navy);
+
+    color:
+        var(--card-white);
+
+}
+
+
+.card-footer-top {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        space-between;
+
+    gap:
+        50px;
+
+}
+
+
+.card-footer-logo {
+
+    width:
+        120px;
+
+    height:
+        auto;
+
+    margin:
+        0
+        0
+        15px;
+
+}
+
+
+.card-footer-top p {
+
+    max-width:
+        300px;
+
+    margin:
+        0;
+
+    color:
+        rgba(255,255,255,0.52);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.5;
+
+}
+
+
+.card-footer-links {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        25px;
+
+}
+
+
+.card-footer-links a {
+
+    color:
+        rgba(255,255,255,0.70);
+
+    text-decoration:
+        none;
+
+    font-size:
+        13px;
+
+}
+
+
+.card-footer-links a:hover {
+
+    color:
+        var(--card-pink-light);
+
+}
+
+
+.card-footer-bottom {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    margin:
+        45px
+        0
+        0;
+
+    padding:
+        20px
+        0
+        0;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.10);
+
+}
+
+
+.card-footer-bottom p {
+
+    margin:
+        0;
+
+    color:
+        rgba(255,255,255,0.35);
+
+    font-size:
+        11px;
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1000px) {
+
+    .card-maker-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .card-controls {
+
+        max-width:
+            650px;
+
+    }
+
+
+    .canvas-container {
+
+        margin:
+            0;
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 760px) {
+
+    .card-container {
+
+        width:
+            calc(100% - 32px);
+
+    }
+
+
+    .card-hero-content {
+
+        padding:
+            75px
+            0;
+
+    }
+
+
+    .card-hero h1 {
+
+        font-size:
+            49px;
+
+        letter-spacing:
+            -1px;
+
+    }
+
+
+    .card-hero-text {
+
+        font-size:
+            16px;
+
+    }
+
+
+    .card-maker-section,
+    .card-conference,
+    .card-how {
+
+        padding:
+            70px
+            0;
+
+    }
+
+
+    .preview-heading {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .preview-heading > span {
+
+        font-size:
+            9px;
+
+    }
+
+
+    .conference-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            55px;
+
+    }
+
+
+    .card-steps {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .card-footer-top {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .card-footer-bottom {
+
+        flex-direction:
+            column;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 480px) {
+
+    .card-section-heading h2 {
+
+        font-size:
+            31px;
+
+    }
+
+
+    .card-hero h1 {
+
+        font-size:
+            43px;
+
+    }
+
+
+    .card-conference h2 {
+
+        font-size:
+            43px;
+
+    }
+
+
+    .canvas-container {
+
+        border-radius:
+            8px;
+
+    }
+
+}

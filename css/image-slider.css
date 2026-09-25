@@ -1,0 +1,385 @@
+/* =========================================
+   SHE BLOSSOMS IMAGE SLIDER
+========================================= */
+
+.theme-content .container.max-width-806 {
+    /*
+     * Make the slider section wider than the
+     * original 806px container.
+     */
+    width: 75vw;
+    max-width: none;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================
+   SLIDER FRAME
+========================================= */
+
+.theme-slider {
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 35px auto 0;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: url(/images/bg-texture-red.jpg);
+
+    isolation: isolate;
+}
+
+
+/* =========================================
+   SLIDER TRACK
+========================================= */
+
+.theme-slider-track {
+    display: flex;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    will-change: transform;
+
+    transition:
+        transform 800ms cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+}
+
+
+/* =========================================
+   INDIVIDUAL SLIDE
+========================================= */
+
+.theme-slide {
+    position: relative;
+
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.theme-slide img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+
+    object-fit: cover;
+  object-position: center 25%; 
+    scale: 0.95; 
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    transform: translateZ(0);
+}
+
+
+/* =========================================
+   NAVIGATION BUTTONS
+========================================= */
+
+.theme-slider-btn {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 20;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    border-radius: 50%;
+
+    background: rgba(7, 25, 65, 0.72);
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Previous */
+
+.theme-slider-prev {
+    left: 22px;
+}
+
+
+/* Next */
+
+.theme-slider-next {
+    right: 22px;
+}
+
+
+/* Hover */
+
+.theme-slider-btn:hover {
+    background: #ec4899;
+    border-color: #ec4899;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+
+/* Active */
+
+.theme-slider-btn:active {
+    transform:
+        translateY(-50%)
+        scale(0.96);
+}
+
+
+/* Focus */
+
+.theme-slider-btn:focus-visible {
+    outline: 3px solid #ffb6df;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1400px) {
+
+    .theme-content .container.max-width-806 {
+        width: 75vw;
+    }
+
+    .theme-slide img {
+        height: 680px;
+    }
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 992px) and (max-width: 1399px) {
+
+    .theme-content .container.max-width-806 {
+        width: 78vw;
+    }
+
+    .theme-slide img {
+        height: 600px;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .theme-content .container.max-width-806 {
+        width: 85vw;
+        max-width: none;
+    }
+
+    .theme-slider {
+        border-radius: 22px;
+    }
+
+    .theme-slide img {
+        height: 520px;
+    }
+
+    .theme-slider-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+    }
+
+    .theme-slider-prev {
+        left: 18px;
+    }
+
+    .theme-slider-next {
+        right: 18px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .theme-content .container.max-width-806 {
+        width: 92vw;
+        max-width: none;
+    }
+
+    .theme-slider {
+        margin-top: 28px;
+        border-radius: 18px;
+    }
+
+    .theme-slide img {
+        height: 430px;
+    }
+
+    .theme-slider-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 19px;
+    }
+
+    .theme-slider-prev {
+        left: 12px;
+    }
+
+    .theme-slider-next {
+        right: 12px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .theme-content .container.max-width-806 {
+        width: 94vw;
+    }
+
+    .theme-slider {
+        margin-top: 24px;
+        border-radius: 15px;
+    }
+
+    .theme-slide img {
+        height: 360px;
+    }
+
+    .theme-slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .theme-slider-prev {
+        left: 9px;
+    }
+
+    .theme-slider-next {
+        right: 9px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .theme-content .container.max-width-806 {
+        width: 95vw;
+    }
+
+    .theme-slide img {
+        height: 320px;
+    }
+
+    .theme-slider-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .theme-slider-prev {
+        left: 7px;
+    }
+
+    .theme-slider-next {
+        right: 7px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .theme-slider-track {
+        transition: none !important;
+    }
+
+    .theme-slider-btn {
+        transition: none;
+    }
+}

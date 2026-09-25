@@ -12,7 +12,11 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link href="/css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="/css/test.css">
+  <link rel="stylesheet" href="/css/countdown.css">
+  <link rel="stylesheet" href="/css/image-slider.css">
+  <script src="/js/image-slider.js" defer></script>
   <script src="/js/form.js" defer></script>
+  <script src="/js/countdown.js" defer></script>
 
    <!-- Script for emailjs -->
     <script type="text/javascript"
@@ -548,7 +552,28 @@
             </div>
           </a><a href="#travel" itemprop="location" itemscope="itemscope" itemtype="https://forms.gle/FEyEK2WKtBPYnewW9"
             class="hero-link text-align-right w-inline-block">
-            <h2 itemprop="name" class="h2-small">WordFeast Auditorium</h2>
+            <h2 itemprop="name" class="h2-small countdown">
+              <div class="countdown-item">
+        <span id="days">00</span>
+        <small>Days</small>
+    </div>
+
+    <div class="countdown-item">
+        <span id="hours">00</span>
+        <small>Hrs</small>
+    </div>
+
+    <div class="countdown-item">
+        <span id="minutes">00</span>
+        <small>Mins</small>
+    </div>
+
+    <div class="countdown-item">
+        <span id="seconds">00</span>
+        <small>Secs</small>
+    </div>
+            
+            </h2>
             <p itemprop="address">Plot 411/413, Alexander David's Event Place, <br />Zik-Avenue, Awka</p>
           </a>
           <div class="header-overlay absolute-overlay"></div>
@@ -589,6 +614,73 @@
       </div>
     </div>
   </header>
+
+  <!-- IMAGE SLIDER -->
+   <div class="theme-content">
+    <div data-w-id="e953738a-1d5a-f4c1-dc50-9951ff06529a" class="container max-width-806">
+      <div class="overline-lg">&nbsp;</div>
+      <h2>
+        Your moment is here. It’s time to step through the doorway and take hold of the distant horizon.
+      </h2>
+
+      <div class="theme-slider">
+        <div class="theme-slider-track">
+
+          <div class="theme-slide">
+            <img src="images/1H4A0007-1000w.webp" alt="">
+          </div>
+
+          <div class="theme-slide">
+            <img src="images/lady-one.jpg" alt="">
+          </div>
+
+          <div class="theme-slide">
+            <img src="images/lady-two.jpg" alt="">
+          </div>
+
+          <div class="theme-slide">
+            <img src="images/partner-image.jpg" alt="">
+          </div>
+
+          <div class="theme-slide">
+            <img src="images/wealth-management.jpg" alt="">
+          </div>
+
+          <div class="theme-slide">
+            <img src="images/next-generation.jpg" alt="">
+          </div>
+
+          <div class="theme-slide">
+            <img src="images/Hero-img-two.jpg" alt="">
+          </div>
+
+          <div class="theme-slide">
+            <img src="images/Hero-img-one.jpg" alt="">
+          </div>
+
+          <div class="theme-slide">
+            <img src="images/excellence.jpg" alt="">
+          </div>
+
+          <div class="theme-slide">
+            <img src="images/about-us.jpg" alt="">
+          </div>
+
+        </div>
+
+        <button class="theme-slider-btn theme-slider-prev" type="button" aria-label="Previous image">
+          &#10094;
+        </button>
+
+        <button class="theme-slider-btn theme-slider-next" type="button" aria-label="Next image">
+          &#10095;
+        </button>
+      </div>
+
+    </div>
+
+    <div class="svg__theme-bottom-curves"></div>
+</div>
 
   <!-- HERO 2 -->
   <section id="about" class="section">
